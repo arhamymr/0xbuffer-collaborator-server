@@ -1,6 +1,6 @@
-# AppRecon Collaborator Server
+# 0xbuffer Collaborator Server
 
-Self-hosted out-of-band interaction collection for AppRecon Desktop.
+Self-hosted out-of-band interaction collection for 0xbuffer Desktop.
 
 ## Features
 
@@ -54,8 +54,8 @@ Deployment pieces:
 - Docker Compose runs the collaborator and Caddy.
 - Caddy publishes ports `80` and `443`.
 - DNS callbacks are exposed directly on port `53/udp` and `53/tcp`.
-- SQLite is stored in the `collaborator-sqlite` named volume at `/data/apprecon.db`.
-- `.env` supplies `COLLAB_DOMAIN`, `API_DOMAIN`, `ACME_EMAIL`, and `APPRECON_API_KEY`.
+- SQLite is stored in the `collaborator-sqlite` named volume at `/data/0xbuffer.db`.
+- `.env` supplies `COLLAB_DOMAIN`, `API_DOMAIN`, `ACME_EMAIL`, and `APP_API_KEY`.
 
 For production, point these records at the host public IP:
 
@@ -68,14 +68,14 @@ The default Caddyfile proxies the API hostname with automatic HTTPS and proxies 
 
 ## Configuration
 
-Configuration is loaded from `config/default.yaml` and can be overridden with environment variables using `APPRECON__` and double underscores for nesting.
+Configuration is loaded from `config/default.yaml` and can be overridden with environment variables using `APP__` and double underscores for nesting.
 
 Example:
 
 ```bash
-APPRECON__DOMAIN__ROOT=collab.company.com
-APPRECON__SECURITY__API_KEY=replace_me
-APPRECON__TLS__ENABLED=true
-APPRECON__TLS__CERT=/certs/fullchain.pem
-APPRECON__TLS__KEY=/certs/privkey.pem
+APP__DOMAIN__ROOT=collab.company.com
+APP__SECURITY__API_KEY=replace_me
+APP__TLS__ENABLED=true
+APP__TLS__CERT=/certs/fullchain.pem
+APP__TLS__KEY=/certs/privkey.pem
 ```

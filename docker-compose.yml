@@ -1,21 +1,21 @@
 services:
   collaborator:
     build: .
-    container_name: apprecon-collaborator
+    container_name: zeroxbuffer-collaborator
     restart: unless-stopped
     env_file:
       - .env
     environment:
-      APPRECON__SERVER__HOST: 0.0.0.0
-      APPRECON__SERVER__PORT: 8080
-      APPRECON__HTTP__HOST: 0.0.0.0
-      APPRECON__HTTP__PORT: 8081
-      APPRECON__DNS__HOST: 0.0.0.0
-      APPRECON__DNS__UDP_PORT: 53
-      APPRECON__DNS__TCP_PORT: 53
-      APPRECON__DOMAIN__ROOT: ${COLLAB_DOMAIN:-collab.company.com}
-      APPRECON__SECURITY__API_KEY: ${APPRECON_API_KEY:-change_me}
-      APPRECON__DATABASE__PATH: /data/apprecon.db
+      APP__SERVER__HOST: 0.0.0.0
+      APP__SERVER__PORT: 8080
+      APP__HTTP__HOST: 0.0.0.0
+      APP__HTTP__PORT: 8081
+      APP__DNS__HOST: 0.0.0.0
+      APP__DNS__UDP_PORT: 53
+      APP__DNS__TCP_PORT: 53
+      APP__DOMAIN__ROOT: ${COLLAB_DOMAIN:-collab.company.com}
+      APP__SECURITY__API_KEY: ${APP_API_KEY:-change_me}
+      APP__DATABASE__PATH: /data/0xbuffer.db
     expose:
       - "8080"
       - "8081"
@@ -27,7 +27,7 @@ services:
 
   caddy:
     image: caddy:2
-    container_name: apprecon-caddy
+    container_name: zeroxbuffer-caddy
     restart: unless-stopped
     depends_on:
       - collaborator

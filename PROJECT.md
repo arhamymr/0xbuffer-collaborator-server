@@ -1,8 +1,8 @@
-# AppRecon Collaborator Server Project
+# 0xbuffer Collaborator Server Project
 
 ## Summary
 
-AppRecon Collaborator Server is a self-hosted out-of-band interaction collector for AppRecon Desktop. It generates callback payloads and records inbound DNS and HTTP interactions for later evidence retrieval.
+0xbuffer Collaborator Server is a self-hosted out-of-band interaction collector for 0xbuffer Desktop. It generates callback payloads and records inbound DNS and HTTP interactions for later evidence retrieval.
 
 ## Stack
 
@@ -42,7 +42,7 @@ collaborator-sqlite
 Inside the container, the database path is:
 
 ```text
-/data/apprecon.db
+/data/0xbuffer.db
 ```
 
 ## Required DNS
@@ -66,7 +66,7 @@ docker compose up -d
 API requests require:
 
 ```http
-Authorization: Bearer APPRECON_API_KEY
+Authorization: Bearer APP_API_KEY
 ```
 
 ## Important Endpoints

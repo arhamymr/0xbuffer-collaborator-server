@@ -57,7 +57,7 @@ impl AppConfig {
     pub fn load() -> anyhow::Result<Self> {
         let config = config::Config::builder()
             .add_source(config::File::with_name("config/default").required(false))
-            .add_source(config::Environment::with_prefix("APPRECON").separator("__"))
+            .add_source(config::Environment::with_prefix("APP").separator("__"))
             .build()?;
 
         config.try_deserialize().context("invalid configuration")

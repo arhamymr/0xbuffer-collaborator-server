@@ -100,10 +100,10 @@ async fn statistics(
 async fn metrics(State(state): State<Arc<AppState>>) -> Result<Response, ApiError> {
     let stats = state.database.stats().await?;
     let body = format!(
-        "# TYPE apprecon_payload_count gauge\napprecon_payload_count {}\n\
-         # TYPE apprecon_interaction_count gauge\napprecon_interaction_count {}\n\
-         # TYPE apprecon_requests_per_minute gauge\napprecon_requests_per_minute {}\n\
-         # TYPE apprecon_dns_queries_per_minute gauge\napprecon_dns_queries_per_minute {}\n",
+        "# TYPE zeroxbuffer_payload_count gauge\nzeroxbuffer_payload_count {}\n\
+         # TYPE zeroxbuffer_interaction_count gauge\nzeroxbuffer_interaction_count {}\n\
+         # TYPE zeroxbuffer_requests_per_minute gauge\nzeroxbuffer_requests_per_minute {}\n\
+         # TYPE zeroxbuffer_dns_queries_per_minute gauge\nzeroxbuffer_dns_queries_per_minute {}\n",
         stats.payload_count,
         stats.interaction_count,
         stats.requests_per_minute,

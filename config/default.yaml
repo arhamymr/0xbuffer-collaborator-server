@@ -16,7 +16,7 @@ domain:
 
 database:
   driver: sqlite
-  path: data/apprecon.db
+  path: data/0xbuffer.db
 
 security:
   api_key: change_me
