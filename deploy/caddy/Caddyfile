@@ -1,0 +1,22 @@
+{
+	email {$ACME_EMAIL}
+}
+
+{$API_DOMAIN} {
+	reverse_proxy collaborator:8080
+}
+
+http://{$COLLAB_DOMAIN}, http://*.{$COLLAB_DOMAIN} {
+	reverse_proxy collaborator:8081
+}
+
+# Wildcard HTTPS for payload callbacks requires a Caddy build with a DNS
+# challenge provider, for example caddy-dns/cloudflare. Replace the HTTP
+# callback block above with a TLS-enabled wildcard block once configured:
+#
+# *.{$COLLAB_DOMAIN} {
+# 	tls {
+# 		dns cloudflare {$CLOUDFLARE_API_TOKEN}
+# 	}
+# 	reverse_proxy collaborator:8081
+# }

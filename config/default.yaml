@@ -1,0 +1,30 @@
+server:
+  host: 0.0.0.0
+  port: 8080
+
+http:
+  host: 0.0.0.0
+  port: 8081
+
+dns:
+  host: 0.0.0.0
+  udp_port: 1053
+  tcp_port: 1053
+
+domain:
+  root: collab.company.com
+
+database:
+  driver: sqlite
+  path: data/apprecon.db
+
+security:
+  api_key: change_me
+  max_body_bytes: 1048576
+
+tls:
+  enabled: false
+  host: 0.0.0.0
+  port: 8443
+  cert: cert.pem
+  key: key.pem

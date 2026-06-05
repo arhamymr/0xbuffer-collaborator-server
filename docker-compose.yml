@@ -1,0 +1,47 @@
+services:
+  collaborator:
+    build: .
+    container_name: apprecon-collaborator
+    restart: unless-stopped
+    env_file:
+      - .env
+    environment:
+      APPRECON__SERVER__HOST: 0.0.0.0
+      APPRECON__SERVER__PORT: 8080
+      APPRECON__HTTP__HOST: 0.0.0.0
+      APPRECON__HTTP__PORT: 8081
+      APPRECON__DNS__HOST: 0.0.0.0
+      APPRECON__DNS__UDP_PORT: 53
+      APPRECON__DNS__TCP_PORT: 53
+      APPRECON__DOMAIN__ROOT: ${COLLAB_DOMAIN:-collab.company.com}
+      APPRECON__SECURITY__API_KEY: ${APPRECON_API_KEY:-change_me}
+      APPRECON__DATABASE__PATH: /data/apprecon.db
+    expose:
+      - "8080"
+      - "8081"
+    volumes:
+      - collaborator-sqlite:/data
+    ports:
+      - "53:53/udp"
+      - "53:53/tcp"
+
+  caddy:
+    image: caddy:2
+    container_name: apprecon-caddy
+    restart: unless-stopped
+    depends_on:
+      - collaborator
+    env_file:
+      - .env
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./deploy/caddy/Caddyfile:/etc/caddy/Caddyfile:ro
+      - caddy-data:/data
+      - caddy-config:/config
+
+volumes:
+  collaborator-sqlite:
+  caddy-data:
+  caddy-config:
