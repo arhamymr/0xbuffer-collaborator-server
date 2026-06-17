@@ -16,7 +16,7 @@ domain:
 
 database:
   driver: sqlite
-  path: data/0xbuffer.db
+  path: data/hexbuffer.db
 
 security:
   api_key: change_me

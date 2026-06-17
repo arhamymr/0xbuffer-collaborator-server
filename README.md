@@ -1,6 +1,6 @@
-# 0xbuffer Collaborator Server
+# hexbuffer Collaborator Server
 
-Self-hosted out-of-band interaction collection for 0xbuffer Desktop.
+Self-hosted out-of-band interaction collection for hexbuffer Desktop.
 
 ## Features
 
@@ -54,7 +54,7 @@ Deployment pieces:
 - Docker Compose runs the collaborator and Caddy.
 - Caddy publishes ports `80` and `443`.
 - DNS callbacks are exposed directly on port `53/udp` and `53/tcp`.
-- SQLite is stored in the `collaborator-sqlite` named volume at `/data/0xbuffer.db`.
+- SQLite is stored in the `collaborator-sqlite` named volume at `/data/hexbuffer.db`.
 - `.env` supplies `COLLAB_DOMAIN`, `API_DOMAIN`, `ACME_EMAIL`, and `APP_API_KEY`.
 
 For production, point these records at the host public IP:

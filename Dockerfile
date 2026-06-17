@@ -9,7 +9,7 @@ RUN apt-get update \
     && apt-get install -y --no-install-recommends ca-certificates \
     && rm -rf /var/lib/apt/lists/*
 WORKDIR /app
-COPY --from=builder /app/target/release/zeroxbuffer-collaborator /usr/local/bin/zeroxbuffer-collaborator
+COPY --from=builder /app/target/release/hexbuffer-collaborator /usr/local/bin/hexbuffer-collaborator
 COPY config ./config
 EXPOSE 8080 8081 8443 53/udp 53/tcp 1053/udp 1053/tcp
-CMD ["zeroxbuffer-collaborator"]
+CMD ["hexbuffer-collaborator"]

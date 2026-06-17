@@ -1,4 +1,4 @@
-# 0xbuffer Collaborator
+# hexbuffer Collaborator
 
 ## Hero
 
@@ -6,7 +6,7 @@
 Catch hidden interactions before they disappear.
 
 ### Subheadline
-0xbuffer Collaborator helps security teams create unique callback links and collect the signals that come back through HTTP and DNS, so out-of-band findings are easier to confirm, review, and share.
+hexbuffer Collaborator helps security teams create unique callback links and collect the signals that come back through HTTP and DNS, so out-of-band findings are easier to confirm, review, and share.
 
 ### Primary Button
 Get Started
@@ -16,7 +16,7 @@ View Deployment Guide
 
 ## What It Is
 
-0xbuffer Collaborator is a self-hosted interaction collection service built for security testing workflows. It gives testers a controlled place to generate callback payloads, listen for activity, and keep a record of what happened.
+hexbuffer Collaborator is a self-hosted interaction collection service built for security testing workflows. It gives testers a controlled place to generate callback payloads, listen for activity, and keep a record of what happened.
 
 When a target system reaches out to one of your generated addresses, the collaborator records that interaction. This makes it easier to spot issues that do not show up directly in the browser or command output.
 
@@ -24,7 +24,7 @@ When a target system reaches out to one of your generated addresses, the collabo
 
 Some security issues are quiet. A system may not return an obvious error, page change, or response, but it may still make a background request. Those background requests can reveal important behavior.
 
-0xbuffer Collaborator gives your team a reliable way to notice those moments. Instead of relying on scattered logs or third-party services, you can run the collector in your own environment and keep the evidence close to your workflow.
+hexbuffer Collaborator gives your team a reliable way to notice those moments. Instead of relying on scattered logs or third-party services, you can run the collector in your own environment and keep the evidence close to your workflow.
 
 ## Key Benefits
 
@@ -37,8 +37,8 @@ Store generated payloads and captured interactions in one place for later review
 ### Run It Yourself
 Deploy the service on your own infrastructure and control where your testing data lives.
 
-### Built for 0xbuffer Desktop
-Designed to work alongside 0xbuffer Desktop, helping testers move from payload creation to evidence collection with less friction.
+### Built for hexbuffer Desktop
+Designed to work alongside hexbuffer Desktop, helping testers move from payload creation to evidence collection with less friction.
 
 ### Simple Deployment Path
 Use Docker Compose and a reverse proxy setup to publish the service quickly in a testing or team environment.
@@ -67,7 +67,7 @@ Run a private collaborator service for training, research, and controlled testin
 
 ## Who It Is For
 
-0xbuffer Collaborator is useful for penetration testers, security researchers, red teams, bug bounty hunters, and internal application security teams that need a dependable way to collect out-of-band signals.
+hexbuffer Collaborator is useful for penetration testers, security researchers, red teams, bug bounty hunters, and internal application security teams that need a dependable way to collect out-of-band signals.
 
 ## Trust And Control
 
@@ -116,23 +116,23 @@ Run with Docker Compose and publish through a standard reverse proxy setup.
 Bring out-of-band testing into your own workflow.
 
 ### Body
-Deploy 0xbuffer Collaborator, connect it with 0xbuffer Desktop, and start collecting the callback evidence that helps confirm quiet security findings.
+Deploy hexbuffer Collaborator, connect it with hexbuffer Desktop, and start collecting the callback evidence that helps confirm quiet security findings.
 
 ### Button
 Start Setup
 
 ## Short Description
 
-0xbuffer Collaborator is a self-hosted service for generating callback payloads and collecting HTTP and DNS interactions during security testing.
+hexbuffer Collaborator is a self-hosted service for generating callback payloads and collecting HTTP and DNS interactions during security testing.
 
 ## Longer Description
 
-0xbuffer Collaborator gives security teams a private way to detect and review out-of-band activity. It generates unique callback payloads, listens for HTTP and DNS interactions, and stores the results so testers can confirm findings that may not be visible in direct responses.
+hexbuffer Collaborator gives security teams a private way to detect and review out-of-band activity. It generates unique callback payloads, listens for HTTP and DNS interactions, and stores the results so testers can confirm findings that may not be visible in direct responses.
 
 ## Tagline Options
 
 - Catch the callbacks your tests depend on.
 - Self-hosted interaction collection for security teams.
 - Turn quiet callbacks into clear evidence.
-- Built for out-of-band testing with 0xbuffer Desktop.
+- Built for out-of-band testing with hexbuffer Desktop.
 - See the background signals your targets send back.

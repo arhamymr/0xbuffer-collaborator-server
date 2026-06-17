@@ -1,7 +1,7 @@
 services:
   collaborator:
     build: .
-    container_name: zeroxbuffer-collaborator
+    container_name: hexbuffer-collaborator
     restart: unless-stopped
     env_file:
       - .env
@@ -15,7 +15,7 @@ services:
       APP__DNS__TCP_PORT: 53
       APP__DOMAIN__ROOT: ${COLLAB_DOMAIN:-collab.company.com}
       APP__SECURITY__API_KEY: ${APP_API_KEY:-change_me}
-      APP__DATABASE__PATH: /data/0xbuffer.db
+      APP__DATABASE__PATH: /data/hexbuffer.db
     expose:
       - "8080"
       - "8081"
@@ -27,7 +27,7 @@ services:
 
   caddy:
     image: caddy:2
-    container_name: zeroxbuffer-caddy
+    container_name: hexbuffer-caddy
     restart: unless-stopped
     depends_on:
       - collaborator

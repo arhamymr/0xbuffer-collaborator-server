@@ -1,8 +1,8 @@
-# 0xbuffer Collaborator Server Project
+# hexbuffer Collaborator Server Project
 
 ## Summary
 
-0xbuffer Collaborator Server is a self-hosted out-of-band interaction collector for 0xbuffer Desktop. It generates callback payloads and records inbound DNS and HTTP interactions for later evidence retrieval.
+hexbuffer Collaborator Server is a self-hosted out-of-band interaction collector for hexbuffer Desktop. It generates callback payloads and records inbound DNS and HTTP interactions for later evidence retrieval.
 
 ## Stack
 
@@ -42,7 +42,7 @@ collaborator-sqlite
 Inside the container, the database path is:
 
 ```text
-/data/0xbuffer.db
+/data/hexbuffer.db
 ```
 
 ## Required DNS
